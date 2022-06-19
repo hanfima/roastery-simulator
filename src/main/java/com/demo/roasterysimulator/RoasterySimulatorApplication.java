@@ -1,6 +1,7 @@
 package com.demo.roasterysimulator;
 
 import com.demo.roasterysimulator.component.WarehouseService;
+import com.demo.roasterysimulator.service.SimulatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -11,6 +12,8 @@ public class RoasterySimulatorApplication implements CommandLineRunner {
 
 	@Autowired
 	private WarehouseService warehouseService;
+	@Autowired
+	private SimulatorService simulatorService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(RoasterySimulatorApplication.class, args);
@@ -20,5 +23,6 @@ public class RoasterySimulatorApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		System.out.println("I am the roaster simulator");
 		warehouseService.loadWarehouse();
+		simulatorService.simulate();
 	}
 }

@@ -31,7 +31,6 @@ public class WarehouseService {
 
     private void addNinjaFacility() {
         RoastingFacility facility = new RoastingFacility("Ninja Facility");
-        facilityService.addFacility(facility);
 
         Machine superHydra = new Machine("SuperHydra", 60, facility);
         Machine kungFu = new Machine("KungFu", 90, facility);
@@ -40,13 +39,13 @@ public class WarehouseService {
         GreenCoffee ethiopian = new GreenCoffee("Ethiopian", 800.0, facility);
         GreenCoffee columbian = new GreenCoffee("Columbian", 1500.0, facility);
 
+        facilityService.addFacility(facility);
         coffeeService.addCoffees(List.of(brazilian, ethiopian, columbian));
         machineService.addMachines(List.of(superHydra, kungFu));
     }
 
     private void addAustrianFacility() {
         RoastingFacility facility = new RoastingFacility("Austrian Facility");
-        facilityService.addFacility(facility);
 
         Machine viennese = new Machine("Viennese Machine", 70, facility);
         Machine tyrolean = new Machine("Tyrolean Machine", 60, facility);
@@ -56,6 +55,7 @@ public class WarehouseService {
         GreenCoffee arabian = new GreenCoffee("Arabian", 300.0, facility);
         GreenCoffee costaRica = new GreenCoffee("Rican", 500.0, facility);
 
+        facilityService.addFacility(facility);
         coffeeService.addCoffees(List.of(guatemala, arabian, costaRica));
         machineService.addMachines(List.of(viennese, tyrolean, mozart));
     }

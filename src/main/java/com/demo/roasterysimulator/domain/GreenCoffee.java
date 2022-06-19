@@ -17,6 +17,11 @@ public class GreenCoffee {
     public GreenCoffee() {
     }
 
+    public GreenCoffee(String country, double weight) {
+        this.country = country;
+        this.weight = weight;
+    }
+
     public GreenCoffee(String country, double weight, RoastingFacility roastingFacility) {
         this.country = country;
         this.weight = weight;
@@ -48,6 +53,10 @@ public class GreenCoffee {
 
     public RoastingProcess getRoastingProcess() {
         return roastingProcess;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
     @Override

@@ -27,6 +27,10 @@ public class RoastingFacility {
     @JsonManagedReference
     List<Machine> machines = new ArrayList<>();
 
+    public long getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }
@@ -52,4 +56,5 @@ public class RoastingFacility {
                 ", greenCoffees=" + greenCoffees +
                 '}';
     }
+
 }

@@ -8,4 +8,7 @@ public interface CoffeeService {
 
     void addCoffee(GreenCoffee coffee);
     void addCoffees(List<GreenCoffee> coffees);
+    List<GreenCoffee> getCoffeesByFacility(long facility);
+    GreenCoffee getRandomCoffee(long facility);
+    GreenCoffee updateCoffeeWeight(GreenCoffee coffee, double roastedCoffee);
 }

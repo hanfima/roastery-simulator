@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Random;
 
 @Service
 public class MachineService {
@@ -19,5 +20,10 @@ public class MachineService {
 
     public void addMachines(List<Machine> machines) {
         machineRepository.saveAllAndFlush(machines);
+    }
+
+    public Machine getRandomMachine(long facility) {
+        List<Machine> machines = machineRepository.findAllByRoastingFacilityId(facility);
+        return machines.get(new Random().nextInt(machines.size()));
     }
 }

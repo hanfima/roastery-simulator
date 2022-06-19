@@ -48,4 +48,15 @@ public class RoastingProcess {
     public GreenCoffee getGreenCoffee() {
         return greenCoffee;
     }
+
+    @Override
+    public String toString() {
+        return "RoastingProcess{" +
+                "id=" + id +
+                ", weight=" + weight +
+                ", duration=" + duration +
+                ", machine=" + machine.getName() +
+                ", greenCoffee=" + greenCoffee.getCountry() +
+                '}';
+    }
 }
