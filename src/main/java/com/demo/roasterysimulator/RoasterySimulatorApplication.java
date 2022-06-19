@@ -24,5 +24,6 @@ public class RoasterySimulatorApplication implements CommandLineRunner {
 		System.out.println("I am the roaster simulator");
 		warehouseService.loadWarehouse();
 		simulatorService.simulate();
+		simulatorService.avgAmountPerMachine();
 	}
 }
